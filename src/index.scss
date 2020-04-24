@@ -1,0 +1,74 @@
+body,
+html {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+#root {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+//Tmp
+$columns: 12;
+$column-size: 8.33%;
+%float-styles {
+    float: left;
+}
+
+@mixin col-x-list {
+    @for $i from 1 through $columns {
+        .col-#{$i}-m {
+            @extend %float-styles;
+            width: $column-size * $i !important;
+        }
+    }
+}
+
+$rows: 12;
+$row-size: 8.33%;
+;
+@mixin h-x-list {
+    @for $i from 0 through $rows {
+        .h-#{$i}-m {
+            position: relative;
+            height: $row-size * $i;
+        }
+    }
+}
+
+$paddings: 10;
+$padding-chucks: 10px;
+@mixin p-h-x-list {
+    @for $i from 1 through $paddings {
+        .p-h-#{$i} {
+            padding-left: $padding-chucks*$i;
+            padding-right: $padding-chucks*$i;
+        }
+    }
+}
+
+.form-control:disabled {
+    background-color: transparent !important;
+}
+
+@mixin p-v-x-list {
+    @for $i from 1 through $paddings {
+        .p-v-#{$i} {
+            padding-top: $padding-chucks*$i;
+            padding-bottom: $padding-chucks*$i;
+        }
+    }
+}
+
+@include col-x-list;
+@include h-x-list;
+@include p-h-x-list;
+@include p-v-x-list;
