@@ -4,6 +4,11 @@ html {
     padding: 0px;
     height: 100%;
     width: 100%;
+    font-size: 1.125rem;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    line-height: 1.43;
+    letter-spacing: 0.01071em;
 }
 
 #root {
@@ -16,6 +21,8 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
+$mainColor :#fff5f5;
+$secondColor :#1a8b9d;
 //Tmp
 $columns: 12;
 $column-size: 8.33%;
@@ -72,3 +79,30 @@ $padding-chucks: 10px;
 @include h-x-list;
 @include p-h-x-list;
 @include p-v-x-list;
+.primary {
+    background-color: $mainColor;
+    color: $secondColor;
+}
+
+.second {
+    background-color: $secondColor;
+    color: $mainColor;
+}
+
+button {
+    border: none;
+    color: $secondColor;
+}
+
+.btn {
+    padding: 4px;
+    font-size: 15px;
+    background-color: none;
+}
+
+.section-header {
+    background-color: $secondColor;
+    color: $mainColor;
+    padding: 10px 10px;
+    font-size: 1.1rem;
+}
