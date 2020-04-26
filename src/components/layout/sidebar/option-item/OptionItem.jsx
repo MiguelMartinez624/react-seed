@@ -15,10 +15,16 @@ function getContent(option) {
 
 export const OptionItem = ({ option }) => {
     return (
-        <div className="col-12-m sidebar-option" >
-            <label style={{ paddingLeft: '14px' }} htmlFor="0">
+        <div className="col-12 sidebar-option" >
+            <label style={{ paddingLeft: '14px', display: 'flex' }} className="col-12" htmlFor="0">
                 {
-                    getContent(option.content)
+
+                    option.icon ? option.icon() : ""
+                }
+                {
+                    <span style={{paddingLeft:'20px'}}>
+                        {getContent(option.content)}
+                    </span>
                 }
             </label>
         </div>

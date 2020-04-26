@@ -1,17 +1,7 @@
-header {
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    font-size: 20px;
-    font-weight: 500;
-    padding: 0px 20px;
-}
-
-.btn {
-    float: left;
-    border: 1px solid green;
-}
-
-.btn:hover {
-    background-color: #ffd615;
-}
+    header {
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+        font-weight: 500;
+    }

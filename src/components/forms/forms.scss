@@ -1,0 +1,33 @@
+.input-round {
+    padding: 14px 14px;
+}
+
+.input-base {
+    font: inherit;
+    color: grey;
+    font-size: 0.87rem;
+    width: 100%;
+    border: 0;
+    height: 1.1876em;
+    margin: 0;
+    display: block;
+    min-width: 0;
+    background: none;
+    box-sizing: content-box;
+}
+
+.input-container {
+    position: relative;
+    border-radius: 5px;
+    border: 1px solid;
+    color: gray;
+}
+
+label {
+    font-size: 0.87rem;
+    color: #000;
+}
+
+.wrapper {
+    margin: 3px;
+}

@@ -10,18 +10,20 @@ import {
 } from "react-router-dom";
 
 import { PublicRoute ,PrivateRoute} from "./components/routing-wrappers"
+import Registration from './components/authentication/registration/Registration';
 
 function App() {
   return (
     <Router>
 
-      <div className="h-12-m col-12-m">
+      <div className="h-12 col-12" style={{overflow:'hidden'}}>
         <Header></Header>
         <Switch>
         <PrivateRoute path="/secure" itsAuthenticated={true} component={Dashboard} />
 
      
           <PublicRoute path="/login" component={Main} />
+          <PublicRoute path="/register" component={Registration} />
 
         </Switch>
       </div>

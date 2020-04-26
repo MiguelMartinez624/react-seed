@@ -1,0 +1,16 @@
+.store-item {
+    display: flex;
+    height: 96px;
+    margin: 16px 0px;
+}
+
+.store-item:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 6px lightblue;
+    z-index: 2;
+}
+
+.avatar-image {
+    width: 30%;
+    background-color: gainsboro;
+}

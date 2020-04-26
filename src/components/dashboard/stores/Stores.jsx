@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { StoreItem } from './store-item/StoreItem'
+import { Card } from '../../content-wrappers/card/Card'
 
 export class Stores extends Component {
     stores = [
@@ -13,15 +15,12 @@ export class Stores extends Component {
                 <div className="section-header">
                     Tus Tiendas
                 </div>
-                <div className="card col-5-m h-8-m">
-                    {this.stores.map((s, i) =>
-                        <div key="i">
-                            <h5>
-                                {s.name}
-                            </h5>
-                        </div>
-                    )
-                    }
+                <div className=" col-5 h-8">
+                    <Card>
+                        {
+                        this.stores.map((s, i) => <StoreItem key={i} store={s} ></StoreItem>)
+                        }
+                    </Card>
                 </div>
             </div>
         )

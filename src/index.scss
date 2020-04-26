@@ -21,8 +21,8 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
-$mainColor :#fff5f5;
-$secondColor :#1a8b9d;
+$mainColor :#1976d2;
+$secondColor :#fff;
 //Tmp
 $columns: 12;
 $column-size: 8.33%;
@@ -32,9 +32,9 @@ $column-size: 8.33%;
 
 @mixin col-x-list {
     @for $i from 1 through $columns {
-        .col-#{$i}-m {
+        .col-#{$i} {
             @extend %float-styles;
-            width: $column-size * $i !important;
+            width: $column-size * $i;
         }
     }
 }
@@ -44,7 +44,7 @@ $row-size: 8.33%;
 ;
 @mixin h-x-list {
     @for $i from 0 through $rows {
-        .h-#{$i}-m {
+        .h-#{$i} {
             position: relative;
             height: $row-size * $i;
         }
@@ -95,9 +95,29 @@ button {
 }
 
 .btn {
-    padding: 4px;
-    font-size: 15px;
+    padding: 4px 10px;
+    font-size: 0.825rem;
     background-color: none;
+    cursor: pointer;
+    height: 45px;
+    border-radius: 5px;
+    margin: 3px 3px;
+}
+
+.btn-empty {
+    background: transparent;
+}
+
+.btn-empty:hover {
+    background-color: rgba(0, 0, 0, 0.103);
+}
+
+.btn-cancel {
+    background-color: orangered;
+}
+
+.btn-success {
+    background-color: $mainColor;
 }
 
 .section-header {
@@ -105,4 +125,24 @@ button {
     color: $mainColor;
     padding: 10px 10px;
     font-size: 1.1rem;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+        width: 100%;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    padding: 0px;
+    margin: 0px;
+}
+
+p {
+    font-size: 0.76rem;
 }
