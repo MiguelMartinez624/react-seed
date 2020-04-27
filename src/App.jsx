@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 import Header from './components/layout/header/Header';
-import Main from "./components/main/Main";
 import Dashboard from "./components/dashboard/Dashboard"
 import {
   BrowserRouter as Router,
@@ -11,6 +10,7 @@ import {
 
 import { PublicRoute ,PrivateRoute} from "./components/routing-wrappers"
 import Registration from './components/authentication/registration/Registration';
+import {Login} from './components/authentication/login/Login';
 
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
         <PrivateRoute path="/secure" itsAuthenticated={true} component={Dashboard} />
 
      
-          <PublicRoute path="/login" component={Main} />
+          <PublicRoute path="/login" component={Login} />
           <PublicRoute path="/register" component={Registration} />
 
         </Switch>

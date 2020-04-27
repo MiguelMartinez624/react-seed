@@ -146,3 +146,15 @@ h5 {
 p {
     font-size: 0.76rem;
 }
+
+.sub-line {
+    border-bottom: 2px solid $mainColor;
+    margin-bottom: 15px;
+}
+
+.photo-min {
+    width: 120px;
+    height: 120px;
+    margin: 4px;
+    background-color: gray;
+}

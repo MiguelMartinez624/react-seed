@@ -14,7 +14,7 @@ const Registration = () => {
                         <div style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center' }}>
                             <span className="material-icons" style={{ fontSize: '120px' }}>
                                 storefront
-                                </span>
+                                </span> 
                             <h3>My Market</h3>
                             <div className="col-12">
 

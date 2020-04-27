@@ -1,14 +1,28 @@
 .input-round {
-    padding: 14px 14px;
+    padding: 9px 14px;
 }
 
 .input-base {
     font: inherit;
     color: grey;
-    font-size: 0.87rem;
+    font-size: 0.75rem;
     width: 100%;
     border: 0;
     height: 1.1876em;
+    margin: 0;
+    display: block;
+    min-width: 0;
+    background: none;
+    box-sizing: content-box;
+}
+
+.input-base-textarea {
+    font: inherit;
+    color: grey;
+    font-size: 0.75rem;
+    width: 100%;
+    border: 0;
+    height: auto;
     margin: 0;
     display: block;
     min-width: 0;
@@ -24,7 +38,7 @@
 }
 
 label {
-    font-size: 0.87rem;
+    font-size: 0.75rem;
     color: #000;
 }
 
