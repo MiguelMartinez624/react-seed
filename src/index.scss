@@ -11,10 +11,13 @@ html {
     letter-spacing: 0.01071em;
 }
 
+
+
 #root {
     position: relative;
     height: 100%;
     width: 100%;
+    background-color: #f5f5f5;
 }
 
 code {
@@ -157,4 +160,16 @@ p {
     height: 120px;
     margin: 4px;
     background-color: gray;
+}
+
+.f-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.f-left{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }

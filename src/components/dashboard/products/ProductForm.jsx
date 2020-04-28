@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import { Input } from '../../forms/Input'
-import { SoftCard } from '../../content-wrappers/soft-card/SoftCard'
+import  {Input}  from '../../forms/Input'
 import { Card } from '../../content-wrappers/card/Card'
 import { TextArea } from '../../forms/TextArea'
 
@@ -16,7 +15,7 @@ export class ProductForm extends Component {
                         <div className="col-5 h-10" style={{ marginRight: '10px',overflowY:'scroll' }}>
 
                             <h5>Basic information</h5>
-                            <Input label="Name"></Input>
+                            <Input width={4} label="Name"></Input>
                             <TextArea label="Description"></TextArea>
                             <div className="col-6">
                                 <Input label="Stock"></Input>

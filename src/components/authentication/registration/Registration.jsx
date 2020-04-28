@@ -1,6 +1,6 @@
 import React from 'react'
 import { SoftCard } from '../../content-wrappers/soft-card/SoftCard'
-import { Input } from '../../forms/Input'
+import  {Input}  from '../../forms/Input'
 import { Card } from '../../content-wrappers/card/Card'
 
 const Registration = () => {

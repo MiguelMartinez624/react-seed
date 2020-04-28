@@ -5,6 +5,7 @@ import { Stores } from "./stores/Stores"
 import Sidebar from '../layout/sidebar/Sidebar';
 import { StoreForm } from './stores/store-form/StoreForm';
 import { ProductForm } from './products/ProductForm';
+import { ProductList } from './products/ProductList';
 
 const navOptions = [
     {
@@ -32,6 +33,11 @@ const navOptions = [
         icon: () => <span className="material-icons">account_circle</span>,
         content: () => <Link to="/secure/stores/create" >  Account</Link>
     },
+    {
+        name: 'Products',
+        icon: () => <span className="material-icons">account_circle</span>,
+        content: () => <Link to="/secure/products" >  Product List</Link>
+    },
 ]
 
 
@@ -47,6 +53,7 @@ export class Dashboard extends Component {
                 <div className="col-10 h-12" style={{ padding: "10px" }}>
                     <Switch>
 
+                        <PrivateRoute path="/secure/products" itsAuthenticated={true} component={ProductList} />
                         <PrivateRoute path="/secure/products/create" itsAuthenticated={true} component={ProductForm} />
                         <PrivateRoute path="/secure/stores/create" itsAuthenticated={true} component={StoreForm} />
                         <PrivateRoute path="/secure/stores" itsAuthenticated={true} component={Stores} />

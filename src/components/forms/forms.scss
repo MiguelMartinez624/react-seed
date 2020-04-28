@@ -35,6 +35,7 @@
     border-radius: 5px;
     border: 1px solid;
     color: gray;
+    width: 100%;
 }
 
 label {
@@ -44,4 +45,20 @@ label {
 
 .wrapper {
     margin: 3px;
+display: flex;
+}
+
+.input-pre{
+display: flex;
+width: 33px;
+align-items: center;
+justify-content: center;
+border-bottom-left-radius: 5px;
+border-top-left-radius: 5px;
+}
+
+.no-borderer-pre{
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+
 }

@@ -12,7 +12,7 @@ export class StoreForm extends Component {
                 <div className="col-8 h-10">
                     <Card>
                         <h4 className="sub-line">Register Store</h4>
-                        <div className="col-5" style={{marginRight:'10px'}}>
+                        <div className="col-5" style={{ marginRight: '10px' }}>
 
                             <h5>Basic information</h5>
                             <Input label="Name"></Input>
@@ -22,7 +22,7 @@ export class StoreForm extends Component {
 
                             <SoftCard className="primary">
                                 <p>
-                                    <strong> NOTE:</strong> This information will be use for the delivery process.  
+                                    <strong> NOTE:</strong> This information will be use for the delivery process.
                                 </p>
                             </SoftCard>
 
