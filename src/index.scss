@@ -1,0 +1,175 @@
+body,
+html {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+    font-size: 1.125rem;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    line-height: 1.43;
+    letter-spacing: 0.01071em;
+}
+
+
+
+#root {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: #f5f5f5;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+$mainColor :#1976d2;
+$secondColor :#fff;
+//Tmp
+$columns: 12;
+$column-size: 8.33%;
+%float-styles {
+    float: left;
+}
+
+@mixin col-x-list {
+    @for $i from 1 through $columns {
+        .col-#{$i} {
+            @extend %float-styles;
+            width: $column-size * $i;
+        }
+    }
+}
+
+$rows: 12;
+$row-size: 8.33%;
+;
+@mixin h-x-list {
+    @for $i from 0 through $rows {
+        .h-#{$i} {
+            position: relative;
+            height: $row-size * $i;
+        }
+    }
+}
+
+$paddings: 10;
+$padding-chucks: 10px;
+@mixin p-h-x-list {
+    @for $i from 1 through $paddings {
+        .p-h-#{$i} {
+            padding-left: $padding-chucks*$i;
+            padding-right: $padding-chucks*$i;
+        }
+    }
+}
+
+.form-control:disabled {
+    background-color: transparent !important;
+}
+
+@mixin p-v-x-list {
+    @for $i from 1 through $paddings {
+        .p-v-#{$i} {
+            padding-top: $padding-chucks*$i;
+            padding-bottom: $padding-chucks*$i;
+        }
+    }
+}
+
+@include col-x-list;
+@include h-x-list;
+@include p-h-x-list;
+@include p-v-x-list;
+.primary {
+    background-color: $mainColor;
+    color: $secondColor;
+}
+
+.second {
+    background-color: $secondColor;
+    color: $mainColor;
+}
+
+button {
+    border: none;
+    color: $secondColor;
+}
+
+.btn {
+    padding: 4px 10px;
+    font-size: 0.825rem;
+    background-color: none;
+    cursor: pointer;
+    height: 45px;
+    border-radius: 5px;
+    margin: 3px 3px;
+}
+
+.btn-empty {
+    background: transparent;
+}
+
+.btn-empty:hover {
+    background-color: rgba(0, 0, 0, 0.103);
+}
+
+.btn-cancel {
+    background-color: orangered;
+}
+
+.btn-success {
+    background-color: $mainColor;
+}
+
+.section-header {
+    background-color: $secondColor;
+    color: $mainColor;
+    padding: 10px 10px;
+    font-size: 1.1rem;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+        width: 100%;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    padding: 0px;
+    margin: 0px;
+}
+
+p {
+    font-size: 0.76rem;
+}
+
+.sub-line {
+    border-bottom: 2px solid $mainColor;
+    margin-bottom: 15px;
+}
+
+.photo-min {
+    width: 120px;
+    height: 120px;
+    margin: 4px;
+    background-color: gray;
+}
+
+.f-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.f-left{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}

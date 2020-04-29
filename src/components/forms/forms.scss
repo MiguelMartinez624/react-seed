@@ -1,0 +1,64 @@
+.input-round {
+    padding: 9px 14px;
+}
+
+.input-base {
+    font: inherit;
+    color: grey;
+    font-size: 0.75rem;
+    width: 100%;
+    border: 0;
+    height: 1.1876em;
+    margin: 0;
+    display: block;
+    min-width: 0;
+    background: none;
+    box-sizing: content-box;
+}
+
+.input-base-textarea {
+    font: inherit;
+    color: grey;
+    font-size: 0.75rem;
+    width: 100%;
+    border: 0;
+    height: auto;
+    margin: 0;
+    display: block;
+    min-width: 0;
+    background: none;
+    box-sizing: content-box;
+}
+
+.input-container {
+    position: relative;
+    border-radius: 5px;
+    border: 1px solid;
+    color: gray;
+    width: 100%;
+}
+
+label {
+    font-size: 0.75rem;
+    color: #000;
+}
+
+.wrapper {
+    margin: 3px;
+display: flex;
+}
+
+.input-pre{
+display: flex;
+width: 33px;
+align-items: center;
+justify-content: center;
+border-bottom-left-radius: 5px;
+border-top-left-radius: 5px;
+}
+
+.no-borderer-pre{
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+
+}

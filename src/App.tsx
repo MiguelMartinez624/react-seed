@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { FC } from 'react';
 import './App.css';
+import Header from './components/layout/header/Header';
+import Dashboard from "./components/dashboard/Dashboard"
+import { BrowserRouter as Router, Switch } from "react-router-dom";
 
-function App() {
+import { PublicRoute, PrivateRoute } from "./components/routing-wrappers"
+import { Registration } from './components/authentication/registration/Registration';
+import { Login } from './components/authentication/login/Login';
+
+export const App: FC<any> = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+
+      <div className="h-12 col-12" style={{ overflow: 'hidden' }}>
+        <Header></Header>
+        <Switch>
+          <PrivateRoute path="/secure" itsAuthenticated={true} component={Dashboard} />
+
+
+          <PublicRoute path="/login" component={Login} />
+          <PublicRoute path="/register" component={Registration} />
+
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
-export default App;
+
