@@ -5,7 +5,7 @@ import Dashboard from "./components/dashboard/Dashboard"
 import { BrowserRouter as Router, Switch } from "react-router-dom";
 
 import { PublicRoute, PrivateRoute } from "./components/routing-wrappers"
-import { Registration } from './components/authentication/registration/Registration';
+import { Registration, AuthSelector } from './components/authentication/registration';
 import { Login } from './components/authentication/login/Login';
 
 export const App: FC<any> = () => {
@@ -19,6 +19,7 @@ export const App: FC<any> = () => {
 
 
           <PublicRoute path="/login" component={Login} />
+          <PublicRoute path="/auth-method" component={AuthSelector} />
           <PublicRoute path="/register" component={Registration} />
 
         </Switch>
