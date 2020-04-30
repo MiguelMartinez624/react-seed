@@ -29,6 +29,9 @@ export class AuthenticationService {
                 };
                 const result = await axios.post(`/signin`, creds, config);
                 console.log(result);
+
+                localStorage.setItem("my_market_token", JSON.stringify(result));
+
                 return resolve(result);
 
             } catch (error) {

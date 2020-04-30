@@ -41,8 +41,8 @@ export class Registration extends Component<RegistrationProps, RegistrationState
     }
 
     public submitForm(): void {
-        const { email, firstname, lastname, password, role, username } = this.state
-        let dto: RegisterUserDTO = new RegisterUserDTO(password, username, firstname, lastname, email, role);
+        const { email, firstname, lastname, password, username } = this.state
+        let dto: RegisterUserDTO = new RegisterUserDTO(password, username, firstname, lastname, email, "provider");
         AuthenticationService.RegisterUser(dto)
             .then((result: any) => {
                 console.log(result);

@@ -57,17 +57,18 @@ export class Login extends Component<LoginProps, LoginState> {
                         <Input  handleChange={this.handleValueChange} name="username" label="Username/email"></Input>
                         <Input  handleChange={this.handleValueChange} name="password" label="Password"></Input>
 
-                        <p>Forgot your passwword?</p>
+                
 
-                        <h5>Dont have an account?</h5>
+               
                         
-                            <Link to="/auth-method">
-                            <button className="col-12 btn btn-success" style={{ flex: 1 }}>
-                            Sign Up
                         
+                            <button onClick={this.submitForm} className="col-12 btn btn-success" style={{ flex: 1 }}>
+                           
+                            Log In
                             </button>
-                            </Link>
-
+                          
+                            <p>Forgot your passwword?</p>
+                            <h5>Dont have an account?</h5>
                         <div className="col-12" style={
                             {
                                 display: 'flex',
@@ -76,7 +77,7 @@ export class Login extends Component<LoginProps, LoginState> {
                                 width: 'calc(100% - 48px)'
                             }}>
                             <button className=" btn btn-cancel" style={{ flex: 1 }}>Cancelar</button>
-                            <button onClick={this.submitForm} className=" btn btn-success" style={{ flex: 1 }}>Log In</button>
+                            <Link  style={{ flex: 1 }} to="/auth-method">  <button  className="col-12 btn btn-success"> Sign Up</button>  </Link>
                         </div>
                     </Card>
                 </div>
