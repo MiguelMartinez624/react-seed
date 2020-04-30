@@ -1,6 +1,7 @@
 import React, { FC } from 'react'
 import { Input } from '../../forms/Input'
 import { Card } from '../../content-wrappers/card/Card'
+import { Link } from 'react-router-dom'
 
 export const Login: FC<any> = () => {
     return (
@@ -17,7 +18,13 @@ export const Login: FC<any> = () => {
                         <p>Forgot your passwword?</p>
 
                         <h5>Dont have an account?</h5>
-                        <button className="col-12 btn btn-success" style={{ flex: 1 }}>Sign Up</button>
+                        
+                            <Link to="/auth-method">
+                            <button className="col-12 btn btn-success" style={{ flex: 1 }}>
+                            Sign Up
+                        
+                            </button>
+                            </Link>
 
                         <div className="col-12" style={
                             {

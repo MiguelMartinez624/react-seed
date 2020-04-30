@@ -20,7 +20,7 @@ export const App: FC<any> = () => {
 
           <PublicRoute path="/login" component={Login} />
           <PublicRoute path="/auth-method" component={AuthSelector} />
-          <PublicRoute path="/register" component={Registration} />
+          <PublicRoute path="/signup" component={Registration} />
 
         </Switch>
       </div>

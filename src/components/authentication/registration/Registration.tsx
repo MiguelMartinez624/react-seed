@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 
 
 import { SoftCard } from '../../content-wrappers/soft-card/SoftCard'
@@ -6,6 +6,7 @@ import { Input } from '../../forms/Input'
 import { Card } from '../../content-wrappers/card/Card'
 import { AuthenticationService } from "../../../services";
 import { RegisterUserDTO } from '../../../core/dto/register';
+import { Link } from 'react-router-dom';
 
 
 export interface RegistrationProps { compiler: string; framework: string; }
@@ -106,8 +107,10 @@ export class Registration extends Component<RegistrationProps, RegistrationState
                             {/* <Input label="Re-password"></Input> */}
                             {this.renderOptionsTemplate()}
 
-                            <p><strong>already have a account ? </strong> </p>
-
+            <Link to="/login">
+            already have a account ?
+            </Link>
+                            
 
                
                             <div className="col-12" style={
