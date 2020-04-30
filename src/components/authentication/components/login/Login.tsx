@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import { Input } from '../../forms/Input'
-import { Card } from '../../content-wrappers/card/Card'
+import { Input } from '../../../forms/Input'
+import { Card } from '../../../content-wrappers/card/Card'
 import { Link } from 'react-router-dom'
-import { AuthenticationService } from '../../../services'
+import { AuthenticationService } from '../../services'
 export interface LoginProps { className:string }
 export interface LoginState {
     username: string; password: string;

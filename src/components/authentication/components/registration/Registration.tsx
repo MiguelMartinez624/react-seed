@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 
 
-import { SoftCard } from '../../content-wrappers/soft-card/SoftCard'
-import { Input } from '../../forms/Input'
-import { Card } from '../../content-wrappers/card/Card'
-import { AuthenticationService } from "../../../services";
-import { RegisterUserDTO } from '../../../core/dto/register';
+import { SoftCard } from '../../../content-wrappers/soft-card/SoftCard'
+import { Input } from '../../../forms/Input'
+import { Card } from '../../../content-wrappers/card/Card'
+import { AuthenticationService } from "../../services";
+import { RegisterUserDTO } from '../../../../core/dto/register';
 import { Link } from 'react-router-dom';
 
 

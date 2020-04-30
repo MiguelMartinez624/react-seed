@@ -1,4 +1,4 @@
-import { RegisterUserDTO } from "../core/dto/register";
+import { RegisterUserDTO } from "../../../core/dto/register";
 import axios from 'axios';
 
 // const API_URL: string =   "http://localhost:8000"

@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 
 import FacebookLogin from 'react-facebook-login';
 import GoogleLogin from 'react-google-login';
-import { Card } from '../../content-wrappers/card/Card';
-import { Section } from '../../layout/section/Section';
+import { Card } from '../../../content-wrappers/card/Card';
+import { Section } from '../../../layout/section/Section';
 export class AuthSelector extends Component<any, any> {
     public renderAuthProviders() {
         return (
