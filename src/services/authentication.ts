@@ -19,6 +19,21 @@ export class AuthenticationService {
                 return reject(error);
             }
         });
+    }
 
+    public static async SignIn(creds: { username: string, password: string }): Promise<any> {
+        return new Promise<any>(async (resolve, reject) => {
+            try {
+                var config = {
+                    headers: { 'Access-Control-Allow-Origin': '*' }
+                };
+                const result = await axios.post(`/signin`, creds, config);
+                console.log(result);
+                return resolve(result);
+
+            } catch (error) {
+                return reject(error);
+            }
+        });
     }
 }

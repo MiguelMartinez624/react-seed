@@ -32,6 +32,8 @@ export class Registration extends Component<RegistrationProps, RegistrationState
             username: ""
         }
         this.handleValueChange = this.handleValueChange.bind(this);
+        this.submitForm = this.submitForm.bind(this);
+
     }
 
     public handleValueChange(value: any, name: string): void {
@@ -76,7 +78,7 @@ export class Registration extends Component<RegistrationProps, RegistrationState
         )
     }
 
- 
+
 
     render() {
         return (
@@ -107,12 +109,12 @@ export class Registration extends Component<RegistrationProps, RegistrationState
                             {/* <Input label="Re-password"></Input> */}
                             {this.renderOptionsTemplate()}
 
-            <Link to="/login">
-            already have a account ?
+                            <Link to="/login">
+                                already have a account ?
             </Link>
-                            
 
-               
+
+
                             <div className="col-12" style={
                                 {
                                     display: 'flex',
