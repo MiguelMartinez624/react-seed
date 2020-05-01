@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import { Switch, Link } from "react-router-dom";
 import { PrivateRoute } from "../routing-wrappers"
 import { Stores } from "./stores/Stores"
@@ -40,11 +40,12 @@ const navOptions = [
         icon: () => <span className="material-icons">account_circle</span>,
         content: () => <Link to="/secure/products" >  Product List</Link>
     },
-]
+];
 
 const headerOptions: import('../layout/header/Header').HeaderOption[] = [
-    { component: () => <Link to="/secure/account    "><span style={{ fontSize: '40px' }} className="material-icons primary">account_circle</span></Link> }
-]
+    { component: () => <Link to="/secure/account"><span style={{ fontSize: '40px' }} className="material-icons primary">account_circle</span></Link> }
+];
+
 export class Dashboard extends Component<any, any> {
     render() {
         return (
