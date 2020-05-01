@@ -1,13 +1,13 @@
-import React from 'react'
-import {Input}  from '../../forms/Input'
+import React, { FC } from 'react'
+import { Input } from '../../forms/Input'
 import { Card } from '../../content-wrappers/card/Card'
 
-export const Login = () => {
+export const Login: FC<any> = () => {
     return (
         <div className="col-12 h-11">
             {/* <section className="right col-3 h-12"></section> */}
             <section className="second left col-12 h-12" style={{ justifyContent: 'center', display: 'flex', paddingTop: '20px' }}>
-           
+
                 <div className="col-3 h-8" >
                     <Card >
                         <div><h3>Login!</h3></div>
