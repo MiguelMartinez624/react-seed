@@ -1,13 +1,22 @@
 
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import { Card } from '../../../content-wrappers/card/Card'
-import Sidebar from '../../../layout/sidebar/Sidebar'
+import { Input } from '../../../forms'
+import { Section } from '../../../layout'
 
 export class ProfileForm extends Component<any, any> {
     render() {
         return (
-            <div className="col-10 h-10">
-          
+
+            <div>
+                <Section width={12}>
+                    Public Profile
+                </Section>
+                <Section width={12}>
+
+                    <Input label="First Name"></Input>
+                    <Input label="Last Name"></Input>
+                </Section>
             </div>
         )
     }

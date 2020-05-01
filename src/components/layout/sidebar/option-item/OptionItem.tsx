@@ -15,7 +15,7 @@ function getContent(option: any) {
 
 export const OptionItem: FC<any> = ({ option }) => {
     return (
-        <div className="col-12 sidebar-option" >
+        <div className="col-12 sidebar-option " >
             <label style={{ paddingLeft: '14px', display: 'flex' }} className="col-12" htmlFor="0">
                 {
 

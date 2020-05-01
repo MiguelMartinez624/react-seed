@@ -8,7 +8,7 @@ export class Sidebar extends Component<SidebarProps, any> {
     render() {
         const { options } = this.props
         return (
-            <div className="col-12 h-12">
+            <div className="col-12 h-12 second">
                 {options.map((option: any, i: number) => <OptionItem key={i} option={option}></OptionItem>)}
             </div>
         )
