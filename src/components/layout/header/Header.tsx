@@ -18,7 +18,7 @@ export class Header extends Component<HeaderProps, any> {
                     <h4>My Market</h4>
                 </div>
 
-                <div className="col-4" style={{ display: 'flex', justifyContent: 'end', paddingRight: '60px' }} >
+                <div className="col-4 primary" style={{ display: 'flex', justifyContent: 'end', paddingRight: '60px' }} >
                     {
                         options.map(o => o.component())
                     }

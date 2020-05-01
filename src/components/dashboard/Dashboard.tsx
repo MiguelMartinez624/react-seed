@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import { Switch, Link } from "react-router-dom";
 import { PrivateRoute } from "../routing-wrappers"
 import { Stores } from "./stores/Stores"
@@ -6,6 +6,8 @@ import Sidebar from '../layout/sidebar/Sidebar';
 import { StoreForm } from './stores/store-form/StoreForm';
 import { ProductForm } from './products/ProductForm';
 import { ProductList } from './products/ProductList';
+import { Header } from '../layout/header/Header';
+import { Profile } from './profile/components';
 
 const navOptions = [
     {
@@ -40,28 +42,36 @@ const navOptions = [
     },
 ]
 
-
-export class Dashboard extends Component {
+const headerOptions: import('../layout/header/Header').HeaderOption[] = [
+    { component: () => <Link to="/secure/account    "><span style={{ fontSize: '40px' }} className="material-icons primary">account_circle</span></Link> }
+]
+export class Dashboard extends Component<any, any> {
     render() {
         return (
-            // sidebar
-            <div className="col-12 h-11" style={{ display: "flex" }}>
-                <div className="col-2 h-12" style={{ borderRight: "1px solid" }}>
+            <div className="col-12 h-12">
 
-                    <Sidebar options={navOptions}></Sidebar>
-                </div>
-                <div className="col-10 h-12" style={{ padding: "10px" }}>
-                    <Switch>
+                <Header options={headerOptions}></Header>
 
-                        <PrivateRoute path="/secure/products" itsAuthenticated={true} component={ProductList} />
-                        <PrivateRoute path="/secure/products/create" itsAuthenticated={true} component={ProductForm} />
-                        <PrivateRoute path="/secure/stores/create" itsAuthenticated={true} component={StoreForm} />
-                        <PrivateRoute path="/secure/stores" itsAuthenticated={true} component={Stores} />
-                    </Switch>
+                <div className="col-12 h-11" style={{ display: "flex" }}>
 
+                    <div className="col-2 h-12" style={{ borderRight: "1px solid" }}>
+
+                        <Sidebar options={navOptions}></Sidebar>
+                    </div>
+                    <div className="col-10 h-12" style={{ padding: "10px" }}>
+                        <Switch>
+
+                            <PrivateRoute path="/secure/account" itsAuthenticated={true} component={Profile} />
+                            <PrivateRoute path="/secure/products" itsAuthenticated={true} component={ProductList} />
+                            <PrivateRoute path="/secure/products/create" itsAuthenticated={true} component={ProductForm} />
+                            <PrivateRoute path="/secure/stores/create" itsAuthenticated={true} component={StoreForm} />
+                            <PrivateRoute path="/secure/stores" itsAuthenticated={true} component={Stores} />
+                        </Switch>
+
+                    </div>
                 </div>
             </div>
-            // main content
+
         )
     }
 }

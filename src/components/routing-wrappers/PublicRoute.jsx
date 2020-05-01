@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import { Route } from 'react-router-dom';
+import { Header } from '../layout/header/Header';
 
 /**
  * A wrapper around @Route from @react-router to add a basic
@@ -8,6 +9,8 @@ import { Route } from 'react-router-dom';
 export const PublicRoute = ({ component: Component, ...rest }) => (
     <Route {...rest} render={(props) => (
         <Fragment>
+            <Header options={[{ component: () => { } }]}></Header>
+
             <Component {...props} />
         </Fragment>
 
