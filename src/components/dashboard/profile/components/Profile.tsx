@@ -8,6 +8,7 @@ import { ProfileForm } from './ProfileForm'
 
 const profileOptions = [
     { icon: () => <span className="material-icons">perm_identity</span>, content: () => <h5>Profile</h5> },
+    { icon: () => <span className="material-icons">location_on</span>, content: () => <h5>Address</h5> },
     { icon: () => <span className="material-icons">credit_card</span>, content: () => <h5>Billing</h5> },
     { icon: () => <span className="material-icons">security</span>, content: () => <h5>Security</h5> },
 ]
