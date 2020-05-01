@@ -15,19 +15,19 @@ const profileOptions = [
 export class Profile extends Component<any, any> {
     render() {
         return (
-            <div className="col-10 h-10">
+            <div className="col-9 h-10">
                 <SectionBar width={12}>
                     This its the section
                     </SectionBar>
                 <div className="col-12 h-12">
-                    <Card style={{paddingLeft:'0px'}}>
-                        <div className="h-12 col-2">
+                    <Card style={{padding:'0px'}}>
+                        <div className="h-12 col-2" style={{ borderRight: "1px solid" }}>
 
                             <Sidebar options={profileOptions} />
 
                         </div>
-                        <div className="h-12 col-10 f-center">
-                            <div className="h-12 col-7">
+                        <div className="h-12 col-9 f-center">
+                            <div className="h-12 col-12" style={{padding:'10px'}}>
 
                             <ProfileForm></ProfileForm>
                             </div>

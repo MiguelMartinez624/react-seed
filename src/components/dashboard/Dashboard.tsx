@@ -58,7 +58,7 @@ export class Dashboard extends Component<any, any> {
 
                         <Sidebar options={navOptions}></Sidebar>
                     </div>
-                    <div className="col-10 h-12" style={{ padding: "10px" }}>
+                    <div className="col-10 h-12 f-center" style={{ padding: "10px" }}>
                         <Switch>
 
                             <PrivateRoute path="/secure/account" itsAuthenticated={true} component={Profile} />
